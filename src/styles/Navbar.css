@@ -1,0 +1,35 @@
+.navbar {
+  background-color: rgb(255, 81, 81);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.logo {
+  color: white;
+  font-size: 25px;
+  padding-left: 30px;
+}
+
+.app-name {
+  font-size: 1em;
+  display: inline;
+  padding-left: 5px;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-element {
+  color:white;
+  padding:10px;
+}
+
+.navbar-nav:nth-child(2){
+  padding-right: 30px;
+}
