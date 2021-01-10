@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../../styles/Navbar.css';
 import PropTypes from 'prop-types';
 
-const Navbar = (props) => {
+const Navbar = ({ icon, title }) => {
   return (
     <nav className="navbar">
       <div className="logo">
-        <i className={props.icon} />
-        <h1 className="app-name"> {props.title}</h1>
+        <i className={icon} />
+        <h1 className="app-name"> {title}</h1>
       </div>
       <div className="navbar-nav">
         <div className="nav-element">Home</div>
