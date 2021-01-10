@@ -1,0 +1,7 @@
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: flex-start;
+  flex-direction: row;
+  flex-flow: wrap;
+}
