@@ -5,7 +5,11 @@ import Users from './users/Users';
 import axios from 'axios';
 class App extends Component {
   state = {
-    api_url: 'https://api.github.com/users',
+    api_url:
+      'https://api.github.com/users?client_id=' +
+      process.env.REACT_APP_GITHUB_CLIENT_ID +
+      '&client_secret=' +
+      process.env.REACT_APP_GITHUB_CLIENT_SECRET,
     users: [],
     loading: false,
   };
@@ -14,8 +18,8 @@ class App extends Component {
     this.setState({ loading: true });
     const res = await axios.get(this.state.api_url);
     this.setState({ users: res.data, loading: false });
-    console.log(res.data);
   }
+
   render() {
     return (
       <div className="App">

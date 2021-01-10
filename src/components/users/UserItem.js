@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React from 'react';
 import '../../styles/UserItem.css';
 import PropTypes from 'prop-types';
 
