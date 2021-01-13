@@ -14,10 +14,15 @@ class App extends Component {
     loading: false,
   };
 
-  async componentDidMount() {
+  componentDidMount() {
+    this.getData();
+  }
+
+  async getData() {
     this.setState({ loading: true });
     const res = await axios.get(this.state.api_url);
     this.setState({ users: res.data, loading: false });
+    console.log(this.state.users);
   }
 
   render() {
