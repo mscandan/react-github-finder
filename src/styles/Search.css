@@ -1,0 +1,25 @@
+.formHolder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.usernameInput {
+  width: 100%;
+  height: 50px;
+  font-size: 25px;
+}
+
+.searchButton {
+  margin-top: 20px;
+  width: 100%;
+  height: 30px;
+  background-color: deepskyblue;
+  border-radius: 5px;
+}
+
+.searchButton:hover {
+  transform: scale(1.1);
+}

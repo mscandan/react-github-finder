@@ -8,13 +8,7 @@ const Users = ({ users, loading }) => {
   if (loading) {
     return <Spinner />;
   } else {
-    return (
-      <div className="container">
-        {users.map((user) => (
-          <UserItem key={user.id} user={user} />
-        ))}
-      </div>
-    );
+    return users.map((user) => <UserItem key={user.id} user={user} />);
   }
 };
 

@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Navbar from './layout/Navbar';
 import Users from './users/Users';
 import axios from 'axios';
+import Search from './users/Search';
 class App extends Component {
   state = {
     api_url:
@@ -14,22 +15,20 @@ class App extends Component {
     loading: false,
   };
 
-  componentDidMount() {
-    this.getData();
-  }
-
-  async getData() {
+  async componentDidMount() {
     this.setState({ loading: true });
     const res = await axios.get(this.state.api_url);
     this.setState({ users: res.data, loading: false });
-    console.log(this.state.users);
   }
 
   render() {
     return (
       <div className="App">
         <Navbar />
-        <Users loading={this.state.loading} users={this.state.users} />
+        <Search />
+        <div className="container">
+          <Users loading={this.state.loading} users={this.state.users} />
+        </div>
       </div>
     );
   }
