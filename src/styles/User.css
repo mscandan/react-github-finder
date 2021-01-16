@@ -1,0 +1,20 @@
+.single-user-container {
+  width: 85vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 30px;
+  border: 3px solid black;
+}
+
+.user-infos-container {
+  width: 50%;
+  margin: 25px 5px 25px 25px;
+  border: 1px solid red;
+}
+
+.user-repos-container {
+  width: 50%;
+  border: 1px solid blue;
+  margin: 25px 25px 25px 5px;
+}

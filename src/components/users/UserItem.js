@@ -1,8 +1,9 @@
 import React from 'react';
 import '../../styles/UserItem.css';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
-const UserItem = ({ user: { key, avatar_url, name, login, html_url } }) => {
+const UserItem = ({ user: { key, avatar_url, name, login } }) => {
   return (
     <div className='card' key={key}>
       <img className='user-avatar' src={avatar_url} alt={name} />
@@ -11,9 +12,9 @@ const UserItem = ({ user: { key, avatar_url, name, login, html_url } }) => {
         <i className='fab fa-github icon' />
         <p className='username'>/{login}</p>
       </div>
-      <a className='user-profile-url' href={html_url} target='blank'>
-        See on Github
-      </a>
+      <Link className='user-profile-url' to={`/user/${login}`} target='blank'>
+        More
+      </Link>
     </div>
   );
 };
