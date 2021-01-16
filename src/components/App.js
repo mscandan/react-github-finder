@@ -1,9 +1,11 @@
 import '../styles/App.css';
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import Navbar from './layout/Navbar';
 import Users from './users/Users';
 import axios from 'axios';
 import Search from './users/Search';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import About from './pages/About';
 class App extends Component {
   state = {
     client_id: process.env.REACT_APP_GITHUB_CLIENT_ID,
@@ -42,17 +44,30 @@ class App extends Component {
   render() {
     const { users, loading } = this.state;
     return (
-      <div className='App'>
-        <Navbar />
-        <div className='container'>
-          <Search
-            searchUsers={this.searchUsers}
-            clearUsers={this.clearUsers}
-            showClear={users.length > 0 ? true : false}
-          />
-          <Users loading={loading} users={users} />
+      <Router>
+        <div className='App'>
+          <Navbar />
+          <div className='container'>
+            <Switch>
+              <Route
+                exact
+                path='/'
+                render={(props) => (
+                  <Fragment>
+                    <Search
+                      searchUsers={this.searchUsers}
+                      clearUsers={this.clearUsers}
+                      showClear={users.length > 0 ? true : false}
+                    />
+                    <Users loading={loading} users={users} />
+                  </Fragment>
+                )}
+              />
+              <Route exact path='/about' component={About} />
+            </Switch>
+          </div>
         </div>
-      </div>
+      </Router>
     );
   }
 }

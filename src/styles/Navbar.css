@@ -26,10 +26,11 @@
 }
 
 .nav-element {
-  color:white;
-  padding:10px;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
 }
 
-.navbar-nav:nth-child(2){
+.navbar-nav:nth-child(2) {
   padding-right: 30px;
 }

@@ -10,6 +10,8 @@
   width: 85vw;
   height: 50px;
   font-size: 25px;
+  border: 1px solid black;
+  border-radius: 5px;
 }
 
 .searchButton {

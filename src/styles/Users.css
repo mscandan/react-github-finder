@@ -1,6 +1,7 @@
-.container {
+.users-container {
+  width: 85%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-content: flex-start;
   flex-direction: row;
   flex-flow: wrap;
