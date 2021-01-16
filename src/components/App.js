@@ -21,23 +21,36 @@ class App extends Component {
 
   // Search users
   searchUsers = (text) => {
-    const query =
-      'https://api.github.com/search/users?q=' +
-      text +
-      '&client_id=' +
-      this.state.client_id +
-      '&client_secret=' +
-      this.state.client_secret;
-    this.getData(query);
+    if (text.length !== 0) {
+      const query =
+        'https://api.github.com/search/users?q=' +
+        text +
+        '&client_id=' +
+        this.state.client_id +
+        '&client_secret=' +
+        this.state.client_secret;
+      this.getData(query);
+    }
+  };
+
+  // Clear users
+  clearUsers = (e) => {
+    e.preventDefault();
+    this.setState({ users: [], loading: false });
   };
 
   render() {
+    const { users, loading } = this.state;
     return (
       <div className='App'>
         <Navbar />
-        <Search searchUsers={this.searchUsers} />
         <div className='container'>
-          <Users loading={this.state.loading} users={this.state.users} />
+          <Search
+            searchUsers={this.searchUsers}
+            clearUsers={this.clearUsers}
+            showClear={users.length > 0 ? true : false}
+          />
+          <Users loading={loading} users={users} />
         </div>
       </div>
     );

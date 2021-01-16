@@ -7,19 +7,34 @@
 }
 
 .usernameInput {
-  width: 100%;
+  width: 85vw;
   height: 50px;
   font-size: 25px;
 }
 
 .searchButton {
+  width: 85vw;
   margin-top: 20px;
-  width: 100%;
-  height: 30px;
+  height: 40px;
   background-color: deepskyblue;
   border-radius: 5px;
+  font-size: medium;
+  color: white;
 }
 
 .searchButton:hover {
+  transform: scale(1.1);
+}
+.clearButton {
+  width: 85vw;
+  margin-top: 20px;
+  height: 40px;
+  background-color: red;
+  border-radius: 5px;
+  font-size: medium;
+  color: black;
+}
+
+.clearButton:hover {
   transform: scale(1.1);
 }
