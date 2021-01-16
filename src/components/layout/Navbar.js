@@ -4,14 +4,14 @@ import PropTypes from 'prop-types';
 
 const Navbar = ({ icon, title }) => {
   return (
-    <nav className="navbar">
-      <div className="logo">
+    <nav className='navbar'>
+      <div className='logo'>
         <i className={icon} />
-        <h1 className="app-name"> {title}</h1>
+        <h1 className='app-name'> {title}</h1>
       </div>
-      <div className="navbar-nav">
-        <div className="nav-element">Home</div>
-        <div className="nav-element">About App</div>
+      <div className='navbar-nav'>
+        <div className='nav-element'>Home</div>
+        <div className='nav-element'>About App</div>
       </div>
     </nav>
   );

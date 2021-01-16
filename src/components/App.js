@@ -23,10 +23,10 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className='App'>
         <Navbar />
         <Search />
-        <div className="container">
+        <div className='container'>
           <Users loading={this.state.loading} users={this.state.users} />
         </div>
       </div>

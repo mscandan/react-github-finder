@@ -12,20 +12,20 @@ export class Search extends Component {
   };
   render() {
     return (
-      <div className="formHolder">
-        <form onSubmit={this.onSubmit} className="form">
+      <div className='formHolder'>
+        <form onSubmit={this.onSubmit} className='form'>
           <div>
             <input
-              type="text"
-              name="text"
-              placeholder="Search user"
-              className="usernameInput"
+              type='text'
+              name='text'
+              placeholder='Search user'
+              className='usernameInput'
               value={this.state.text}
               onChange={this.onChange}
             />
           </div>
           <div>
-            <input type="submit" value="Search" className="searchButton" />
+            <input type='submit' value='Search' className='searchButton' />
           </div>
         </form>
       </div>

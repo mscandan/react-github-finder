@@ -4,14 +4,14 @@ import PropTypes from 'prop-types';
 
 const UserItem = ({ user: { key, avatar_url, name, login, html_url } }) => {
   return (
-    <div className="card" key={key}>
-      <img className="user-avatar" src={avatar_url} alt={name} />
-      <div className="user-name">{name}</div>
-      <div className="user-login">
-        <i className="fab fa-github icon" />
-        <p className="username">/{login}</p>
+    <div className='card' key={key}>
+      <img className='user-avatar' src={avatar_url} alt={name} />
+      <div className='user-name'>{name}</div>
+      <div className='user-login'>
+        <i className='fab fa-github icon' />
+        <p className='username'>/{login}</p>
       </div>
-      <a className="user-profile-url" href={html_url} target="blank">
+      <a className='user-profile-url' href={html_url} target='blank'>
         See on Github
       </a>
     </div>
