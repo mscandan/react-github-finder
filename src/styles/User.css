@@ -11,10 +11,60 @@
   width: 50%;
   margin: 25px 5px 25px 25px;
   border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 25px;
 }
 
 .user-repos-container {
   width: 50%;
   border: 1px solid blue;
   margin: 25px 25px 25px 5px;
+}
+
+.single-user-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.social-github {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.social-github:active {
+  color: black;
+}
+
+.single-user-name {
+  font-size: 22px;
+  font-style: italic;
+}
+
+.single-user-login {
+  font-size: 20px;
+  font-style: italic;
+}
+
+.single-user-location {
+  font-size: 18px;
+}
+
+.single-user-location i {
+  padding-right: 5px;
+}
+
+.social-blog {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.social-blog:active {
+  color: black;
 }

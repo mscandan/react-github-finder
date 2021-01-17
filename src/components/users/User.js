@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import '../../styles/User.css';
+import Gists from '../layout/Gists';
+import Repos from '../layout/Repos';
+import Spinner from '../spinner/Spinner';
 
 class User extends Component {
   componentDidMount() {
@@ -13,39 +16,51 @@ class User extends Component {
       location,
       bio,
       blog,
-      login,
       html_url,
-      followers,
-      following,
-      public_repos,
-      public_gists,
-      hireable
+      repos_url,
+      gists_url
     } = this.props.user;
 
     const { loading } = this.props;
-
-    return (
-      <div className='single-user-container'>
-        <div className='user-infos-container'>
-          <div className='single-user-name'>{name}</div>
-          <img className='single-user-name' src={avatar_url} alt={name} />
-          <div className='single-user-location'>{location}</div>
-          <div className='single-user-bio'>{bio}</div>
-          <div className='single-user-blog'>{blog}</div>
-          {/* alttaki ikili tek butonda halledilecek */}
-          <div className='single-user-login'>{login}</div>
-          <div className='single-user-github'>{html_url}</div>
-          <div className='single-user-followers'>Followers: {followers}</div>
-          <div className='single-user-following'>Following : {following}</div>
-          <div className='single-user-hireable'>{hireable}</div>
+    if (loading) {
+      return <Spinner />;
+    } else {
+      return (
+        <div className='single-user-container'>
+          <div className='user-infos-container'>
+            <img className='single-user-image' src={avatar_url} alt={name} />
+            <div className='single-user-name'>{name}</div>
+            <a
+              href={html_url}
+              className='social-github'
+              rel='noreferrer'
+              target='_blank'
+            >
+              See more on <i class='fa fa-github' aria-hidden='true'></i>
+            </a>
+            <div className='single-user-location'>
+              <i class='fa fa-map-marker' aria-hidden='true'></i>
+              {location}
+            </div>
+            <div className='single-user-bio'>{bio}</div>
+            <div className='single-user-social'>
+              <a
+                href={`https://${blog}`}
+                className='social-blog'
+                rel='noreferrer'
+                target='_blank'
+              >
+                {blog}
+              </a>
+            </div>
+          </div>
+          <div className='user-repos-container'>
+            <Repos repos={repos_url} />
+            <Gists gists={gists_url} />
+          </div>
         </div>
-        <div className='user-repos-container'>
-          {/* request yapilacak repolar cekilecek */}
-          <div className='public-repos'>{public_repos}</div>
-          <div className='public-gists'>{public_gists}</div>
-        </div>
-      </div>
-    );
+      );
+    }
   }
 }
 
