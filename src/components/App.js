@@ -13,7 +13,7 @@ class App extends Component {
     client_secret: process.env.REACT_APP_GITHUB_CLIENT_SECRET,
     users: [],
     loading: false,
-    user: {},
+    user: {}
   };
 
   // display some users

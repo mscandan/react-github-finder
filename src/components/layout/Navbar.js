@@ -25,13 +25,13 @@ const Navbar = ({ icon, title }) => {
 // if user doesn't pass values with props default values will be the values of props
 Navbar.defaultProps = {
   title: 'Github Finder',
-  icon: 'fab fa-github',
+  icon: 'fab fa-github'
 };
 
 // giving props a type
 Navbar.propTypes = {
   title: PropTypes.string.isRequired, // title prop must be string and it's required
-  icon: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired
 };
 
 export default Navbar;

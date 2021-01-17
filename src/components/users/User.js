@@ -19,7 +19,7 @@ class User extends Component {
       following,
       public_repos,
       public_gists,
-      hireable,
+      hireable
     } = this.props.user;
 
     const { loading } = this.props;
