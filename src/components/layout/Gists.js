@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import SingleRepo from './SingleRepo';
+import SingleGist from './SingleGist';
 
 class Gists extends Component {
   state = {
@@ -10,10 +12,10 @@ class Gists extends Component {
   };
   getGists() {}
   render() {
-    const { gists_url } = this.props;
+    const { gists } = this.props;
     return (
       <div className='gists-container'>
-        <div>Gists</div>
+        <SingleGist />
       </div>
     );
   }

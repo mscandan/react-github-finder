@@ -36,10 +36,10 @@ class User extends Component {
               rel='noreferrer'
               target='_blank'
             >
-              See more on <i class='fa fa-github' aria-hidden='true'></i>
+              See more on <i className='fa fa-github' aria-hidden='true'></i>
             </a>
             <div className='single-user-location'>
-              <i class='fa fa-map-marker' aria-hidden='true'></i>
+              <i className='fa fa-map-marker' aria-hidden='true'></i>
               {location}
             </div>
             <div className='single-user-bio'>{bio}</div>
